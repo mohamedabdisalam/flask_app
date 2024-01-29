@@ -1,5 +1,5 @@
-import os
-from flask import Flask, request
+# import os
+from flask import Flask
 
 # Create a new Flask app
 app = Flask(__name__)
@@ -12,14 +12,14 @@ app = Flask(__name__)
 # Returns a emojiy face
 # Try it:
 #   ; curl http://127.0.0.1:5001/emoji
-@app.route('/emoji', methods=['GET'])
+@app.route('/', methods=['GET'])
 def get_emoji():
     return "My favourite film is Kill Bill"
 
 # This imports some more example routes for you to see how they work
 # You can delete these lines if you don't need them.
-from example_routes import apply_example_routes
-apply_example_routes(app)
+# from example_routes import apply_example_routes
+# apply_example_routes(app)
 
 # == End Example Code ==
 
@@ -27,5 +27,5 @@ apply_example_routes(app)
 # They also start the server configured to use the test database
 # if started in test mode.
 if __name__ == '__main__':
-    app.run(debug=True, port=int(os.environ.get('PORT', 5001)))
+    app.run(debug=True, host='0.0.0.0', port=5000)
 
