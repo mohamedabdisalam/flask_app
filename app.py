@@ -14,7 +14,7 @@ app = Flask(__name__)
 #   ; curl http://127.0.0.1:5001/emoji
 @app.route('/emoji', methods=['GET'])
 def get_emoji():
-    return ":)"
+    return "My favourite film is Kill Bill"
 
 # This imports some more example routes for you to see how they work
 # You can delete these lines if you don't need them.
